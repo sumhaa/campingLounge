@@ -50,17 +50,23 @@ public class ReviewService {
 
     // Review Write
     public ResReviewWriteDto writeReviews(ReviewWriteDto reviewWriteDto) throws IOException {
+        // 멤버 조회
         Member member = memberRepository.findById(reviewWriteDto.getMemberId())
                 .orElseThrow(() -> new IllegalArgumentException("Member not found"));
 
+        // 캠핑장 조회
         Campsite campsite = campRepository.findById(reviewWriteDto.getCampId())
                 .orElseThrow(() -> new IllegalArgumentException("Camp not found"));
 
+        
+        // 예약 내역 조회
         Reservation reservation = reservationRepository.findById(reviewWriteDto.getReservationId())
                 .orElseThrow(() -> new IllegalArgumentException("존재하지 않는 예약입니다."));
 
+        // dto을 엔티티로 변환
         Review review = reviewWriteDto.toEntity(member, campsite, reservation);
 
+        // 리뷰 repository에 저장
         Review savedReview = reviewRepository.save(review);
 
         return ResReviewWriteDto.fromEntity(savedReview);
