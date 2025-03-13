@@ -1,0 +1,74 @@
+#header.admin-header { position: relative; background-color: var(--natural_10); }
+#header.admin-header .logo { display: flex; gap: 1rem; align-items: center; }
+#main.admin {display: block; background-color: var(--natural_10); padding-bottom: 2rem; padding-top: 0; min-height: 100vh;}
+#main.admin .container > .inner_00 { display: flex; justify-content: space-between; position:relative ;}
+#main.admin .component { width:100%; background-color: var(--natural_0); padding: 2rem; border-radius: var(--round-lg); border: 1px solid var(--natural_50);}
+#main.admin #side-menu { display: flex; flex-direction: column; gap:2rem; position: sticky; top: 0; left: 0; max-width: calc(25% - 1rem); width: 100%; height:min( calc(100vh - var(--header-height)),fit-content);  padding-top: var(--space_md);}
+#main.admin #side-menu nav ul { display: flex; flex-direction: column; gap: var(--space_sm); }
+#main.admin #side-menu nav ul li { display: block; width: 100%; border-radius: var(--round-md); background-color: var(--natural_20); transition: .2s;}
+#main.admin #side-menu nav ul li p a { display: block; width: 100%; text-align: center; padding: 8px 0;}
+#main.admin #side-menu nav ul li.active { background-color: var(--primary_m); }
+#main.admin #side-menu nav ul li.active p a {color: var(--natural_0); }
+#main.admin .sort-box { display: flex; gap: .5rem; }
+#main.admin .sort-box .btn img{ width: 2rem; filter:  }
+
+@media (hover:hover) and (pointer:fine) {
+    #main.admin #side-menu nav ul li:hover { background-color: var(--primary_m); }
+    #main.admin #side-menu nav ul li:hover p a { color:var(--natural_0); }
+}
+
+#main.admin article { flex-grow: 1; max-width: calc(75% - 1rem);  padding-top: var(--space_md);}
+#main.admin article .component { min-height: 100%; }
+#main.admin .item { margin-bottom: var(--space_lg); }
+#main.admin .item:last-child {margin-bottom:0;}
+#main.admin h3 { position: relative; color: var(--primary_m); font-weight: 500; }
+#main.admin h3::after { content: ''; display: block; width: 100%; height: 1px ; background-color: var(--primary_m); margin:0 0 var(--space_lg) 0;}
+
+#main.admin table { border-radius: var(--round-md); overflow: hidden; }
+#main.admin table thead { border-bottom: 1px solid var(--primary_m); }
+#main.admin table td { font-size: var(--font_md); text-align: center; padding: 8px; border-bottom: 1px solid var(--natural_40);}
+#main.admin table td .btn { margin: 0 auto; }
+#main.admin table img { width: 6rem; height: 4rem; margin: 0 auto; border-radius: var(--round-sm); }
+#main.admin table .label { color: var(--natural_60); }
+#main.admin table input[type="text"],
+#main.admin table input[type="number"] { font-size: var(--font_md); width: 160px ; border-radius: var(--round-sm); border: 1px solid var(--primary_m); padding: 4px .5rem }
+#main.admin table input.max { width: 100%; }
+#main.admin table textarea { font-size: var(--font_md); width:100% ; border-radius: var(--round-sm); border: 1px solid var(--primary_m); padding: 4px .5rem }
+#main.admin table td,
+#main.admin table td { color:var(--natural_70) }
+#main.admin table thead { background: var(--primary_d) }
+#main.admin table select {font-size: var(--font_md); width: fit-content ; border-radius: var(--round-sm); border: 1px solid var(--primary_m); padding: 4px .5rem; }
+#main.admin table td .search-input { width: 100%; height: 2rem; border: 1px solid var(--primary_m); font-size: var(--font_md); padding:.5rem 1rem; border-radius: var(--round-sm);}
+
+/*dashboard*/
+#main.admin .dashboard_list { display: flex; gap: 1rem; }
+#main.admin .dashboard_list li { position: relative; width: 100%; background-color: var(--primary_d); border: 1px solid var(--primary_m); border-radius: var(--round-md); padding: 1rem 2rem;}
+#main.admin .dashboard_list li .icon { position: absolute; top: 1rem; right: 1rem; width: 3rem; height: 3rem; background-color: var(--natural_0); padding: .7rem; border-radius: 50%; border: 1px solid var(--primary_m);}
+#main.admin .dashboard_list li input[type="number"] {font-size: var(--font_md); width: 10rem ; border-radius: var(--round-sm); border: 1px solid var(--primary_m); padding: 4px .5rem }
+#main.admin .dashboard_list li input[type="text"] {font-size: var(--font_md); width: 15rem ; border-radius: var(--round-sm); border: 1px solid var(--primary_m); padding: 4px .5rem }
+#main.admin .dashboard_list li input[type="submit"] { width: fit-content; padding: 5px .5rem; background: var(--primary_m); border-radius: var(--round-sm); border: none; color: var(--natural_0); }
+#main.admin .dashboard_list li .item-box {justify-content: flex-start; gap: .5rem;}
+#main.admin .dashboard_list li .btn { width: 100%; font-size: var(--font_md); background: var(--primary_m); border-radius: var(--round-sm); padding: 5px .5rem; }
+#main.admin .item-box { display: flex; justify-content: center; }
+
+/*modal*/
+#main.admin #dark-area { content: ''; display: block; position: fixed ; top:0; left: 0; width: 100%; height: 100%; background-color: var(--natural_100); opacity: 0; z-index: 990; pointer-events: none; transition: .3s;}
+#main.admin #dark-area.active { opacity: 0.5; pointer-events: all; }
+
+#main.admin #modal { display: block; position: fixed; top: 100%; left: 50%; transform: translate(-50%,0);  width: 800px; max-width: 100%; height: 90vh; background-color: var(--natural_0); z-index: 999; border: 2px solid var(--primary_m); border-radius: var(--round-lg); transition: .3s;}
+#main.admin #modal.active { top: 50%; transform: translate(-50%,-50%); }
+
+#main.admin #modal .close-btn { display: block; position: absolute; top: 1rem; right: 1rem ; width: 2rem; height: 2rem; cursor: pointer;}
+#main.admin #modal .close-btn img { width: 100%; }
+
+#main.admin #modal .modal_inner { padding:var(--space_xlg) var(--space_lg) ; overflow-y: scroll; height:100%;}
+main.admin #modal #reservation-form { display: flex; flex-direction: column; align-items: center; gap: var(--space_lg); }
+#main.admin #modal input.submit { background-color: var(--second_m);  box-shadow: 0px 8px 0 var(--second_k); }
+
+/*campboard*/
+#main.admin #modal .icon_list {display: flex; justify-content: space-between}
+#main.admin #modal .icon_list li { display: flex; flex-direction: column; gap: .5rem;}
+#main.admin #modal .icon_list label { font-size: var(--font_sm); background: var(--primary_m); color: var(--natural_0); padding: 0 8px; border-radius: 5px }
+#main.admin #modal input[type="file"] { width: 100%; border: 1px solid var(--primary_m); text-align: center; padding: 5px 1rem; border-radius: var(--round-sm)}
+
+

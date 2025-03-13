@@ -1,0 +1,267 @@
+:root {
+    --primary_m : #16C47F;
+    --primary_k : #316F57;
+    --primary_l : #63F7BC;
+    --primary_d : #D0FCEA;
+
+    --second_m : #FF9D23;
+    --second_k : #C28046;
+    --second_l : #FFD65A;
+
+    --error_m : #F93827 ;
+    --error_k : #8B2016 ;
+
+    --natural_100: #000;
+    --natural_80: #161616;
+    --natural_70: #1d1d1d;
+    --natural_60: #646464;
+    --natural_50: #8d8d8d;
+    --natural_40: #dedede;
+    --natural_30: #DEE2E6;
+    --natural_20: #E9ECEF;
+    --natural_10: #F2F4F6;
+    --natural_0: #fff;
+
+    --space_xxlg  : 96px;
+    --space_xlg  : 64px;
+    --space_lg : 32px;
+    --space_md : 16px;
+    --space_sm : 8px;
+    --space_xsm : 4px ;
+
+    --font_xlg :32px ;
+    --font_lg : 24px ;
+    --font_md : 18px;
+    --font_sm : 14px;
+    --font_xsm : 11px;
+
+    --round-xlg : 3rem;
+    --round-lg : 15px;
+    --round-md : 10px;
+    --round-sm :  5px;
+
+    --header-height: 90px;
+}
+
+/* body, html 1rem 정의 ---------------------------------------------------------------*/
+html,body { font-size: 16px; }
+#main { min-height: 100vh; }
+
+/* layput ---------------------------------------------------------------*/
+.sec { display: block; position: relative; width: 100%; margin-bottom: var(--space_xxlg);}
+
+.inner_00 { width: 100%; max-width:calc(100% - 4rem); position: relative; margin: 0 auto; }
+.inner_01 { width: 100%; max-width:1600px; position: relative; margin: 0 auto; }
+.inner_02 { width: 100%; max-width:1280px; position: relative; margin: 0 auto; }
+
+/* layput - youtube iframe*/
+.yt_wrap { position: relative; padding-top: 56.25%;}
+.yt_wrap.shorts { position: relative; padding-top: 177.25%;}
+.yt_wrap iframe { width: 100%; height: 100%; position: absolute; top: 0; left: 0; border: 0; }
+
+
+/* font size ---------------------------------------------------------------*/
+[class*="fs_"] { font-family: "Pretendard"; font-weight: 400; line-height: 1.4; color: var(--natural_80); }
+.fs_xlg { font-size: var(--font_xlg); }
+.fs_lg { font-size: var(--font_lg); }
+.fs_md { font-size: var(--font_md); }
+.fs_sm { font-size: var(--font_sm); }
+.fs_xsm { font-size: var(--font_xsm); }
+
+.title {color:var(--primary_m); font-family: 'HakgyoansimDunggeunmisoTTF-B'; }
+.title.tit-md { font-size: var(--font_xlg); }
+.title.tit-lg { font-size: 60px; }
+
+h1 { font-size: 96px; color:var(--natural_80);}
+h2 { font-size: 60px; color:var(--natural_80);}
+h3 { font-size: 48px; color:var(--natural_80);}
+h4 { font-size: 64px; color:var(--natural_80);}
+h5 { font-size: 24px; color:var(--natural_80);}
+h6 { font-size: 20px; color:var(--natural_80);}
+span { font-size: 14px; color:var(--natural_80);}
+
+
+.txt-a-c { text-align: center; }
+.txt-a-l { text-align: left; }
+.txt-a-r { text-align: right; }
+
+/* margin & padding */
+.mlr-a { margin-left: auto; margin-right: auto; }
+.mb_xlg { margin-bottom: var(--space_xlg); }
+.mb_lg { margin-bottom: var(--space_lg); }
+.mb_md { margin-bottom: var(--space_md); }
+.mb_sm { margin-bottom: var(--space_sm); }
+.mb_xsm { margin-bottom: var(--space_xsm); }
+
+.mt_xlg { margin-top: var(--space_xlg); }
+.mt_lg { margin-top: var(--space_lg); }
+.mt_md { margin-top: var(--space_md); }
+.mt_sm { margin-top: var(--space_sm); }
+.mt_xsm { margin-top: var(--space_xsm); }
+
+.ml_xlg { margin-left: var(--space_xlg); }
+.ml_lg { margin-left: var(--space_lg); }
+.ml_md { margin-left: var(--space_md); }
+.ml_sm { margin-left: var(--space_sm); }
+.ml_xsm { margin-left: var(--space_xsm); }
+
+.mr_xlg { margin-right: var(--space_xlg); }
+.mr_lg { margin-right: var(--space_lg); }
+.mr_md { margin-right: var(--space_md); }
+.mr_sm { margin-right: var(--space_sm); }
+.mr_xsm { margin-right: var(--space_xsm); }
+
+.pb_xlg { padding-bottom: var(--space_xlg); }
+.pb_lg { padding-bottom: var(--space_lg); }
+.pb_md { padding-bottom: var(--space_md); }
+.pb_sm { padding-bottom: var(--space_sm); }
+.pb_xsm { padding-bottom: var(--space_xsm); }
+
+.pt_xlg { padding-top: var(--space_xlg); }
+.pt_lg { padding-top: var(--space_lg); }
+.pt_md { padding-top: var(--space_md); }
+.pt_sm { padding-top: var(--space_sm); }
+.pt_xsm { padding-top: var(--space_xsm); }
+
+.pl_xlg { padding-left: var(--space_xlg); }
+.pl_lg { padding-left: var(--space_lg); }
+.pl_md { padding-left: var(--space_md); }
+.pl_sm { padding-left: var(--space_sm); }
+.pl_xsm { padding-left: var(--space_xsm); }
+
+.pr_xlg { padding-right: var(--space_xlg); }
+.pr_lg { padding-right: var(--space_lg); }
+.pr_md { padding-right: var(--space_md); }
+.pr_sm { padding-right: var(--space_sm); }
+.pr_xsm { padding-right: var(--space_xsm); }
+
+/* text color */
+.tc-p { color:var(--primary_m); }
+.tc-s { color:var(--second_m); }
+.tc-e { color:var(--error_m); }
+.tc-w { color:var(--natural_0); }
+.tc-b { color:var(--natural_100); }
+
+
+/* form */
+/* input */
+input.input-txt { display: block; max-width:100%;  background-color: var(--natural_0); border:1px solid var(--primary_m); padding: 5px 1rem;  transition: .2s;}
+input.input-txt:focus {  background-color: var(--primary_d); }
+
+input.input-file { display: block; max-width:100%;  background-color: var(--natural_0); border:1px solid var(--primary_m); padding: 5px 1rem;  transition: .2s;}
+input.submit {width:100%; background-color: var(--primary_m); border:none; cursor: pointer; color:var(--natural_0); box-shadow: 0px 8px 0 var(--primary_k); transition: .2s;}
+input.submit-f {width:100%; background-color: var(--primary_m); border:none; cursor: pointer; color:var(--natural_0); transition: .2s;}
+
+input.input-sm { width: 160px; height: 56px; border-radius: 30px; font-size:var(--font_lg);}
+input.input-lg { width: 320px; height: 56px; border-radius: 30px; font-size:var(--font_lg);}
+input.input-xlg { width: 640px; height: 56px; border-radius: 30px; font-size:var(--font_lg);}
+input.input-max { width: 100%; height: 56px; border-radius: 30px; font-size:var(--font_lg);}
+
+
+/* textarea */
+textarea.textarea { width: 100%; border: 1px solid var(--primary_m); border-radius: var(--round-lg); padding: 1rem; font-size: var(--font_md); transition: .2s;}
+textarea.textarea:focus { border: 1px solid var(--second_m); }
+
+/* label */
+label.label { display: block; font-size: var(--font_lg);}
+
+/* select */
+select.select { max-width: 100%; border: 1px solid var(--primary_m); text-align: center;}
+select.select-md { width: 160px; padding: 5px 0; border-radius: 50px; font-size: var(--font_lg);  }
+
+/* radio */
+.radio_list { display: flex; gap: 2rem; align-items: center; }
+.radio_list li { display: flex; gap: .5rem; align-items: center; }
+.radio_list label { color: var(--natural_60); }
+.radio-sm { font-size: var(--font_sm); }
+.radio-md { font-size: var(--font_md); }
+.radio-lg { font-size: var(--font_lg); }
+
+/* btn */
+.btn { display: block; max-width:100%; border:none; cursor: pointer; color:var(--natural_0);  transition: .2s;}
+.btn > a { display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; color: var(--natural_0);}
+
+.btn.btn-xsm { width: 80px; height: 32px; border-radius: 30px; font-size:var(--font_sm);}
+.btn.btn-sm { width: 160px; height: 56px; border-radius: 30px; font-size:var(--font_lg);}
+.btn.btn-lg { width: 320px; height: 56px; border-radius: 30px; font-size:var(--font_lg);}
+
+.btn.btn-p {background-color: var(--primary_m); box-shadow: 0px 8px 0 var(--primary_k);}
+.btn.btn-s {background-color: var(--second_m); box-shadow: 0px 8px 0 var(--second_k);}
+.btn.btn-e {background-color: var(--error_m); box-shadow: 0px 8px 0 var(--primary_k);}
+.btn.btn-p-f { background-color: var(--primary_m); }
+.btn.btn-s-f {background-color: var(--second_m);}
+.btn.btn-e-f {background-color: var(--error_m);}
+
+.btn.btn-p-l {border:1px solid var(--primary_m); color: var(--primary_m); background-color: transparent;}
+.btn.btn-p-l > a{ color: var(--primary_m);}
+.btn.btn-s-l {border:1px solid var(--second_m); color: var(--second_m); background-color: transparent;}
+.btn.btn-s-l > a{ color: var(--second_m);}
+.btn.btn-e-l {border:1px solid var(--error_m); color: var(--error_m); background-color: transparent;}
+.btn.btn-e-l > a{ color: var(--error_m);}
+
+/* bar */
+.bar { height: 1px; background-color: var(--primary_m); margin-left: auto; margin-right: auto; max-width: 100%;}
+.bar.bar-n40 { background-color: var(--natural_40); }
+.bar.bar-n60 { background-color: var(--natural_60); }
+.bar-md { width: 10rem; }
+.bar-lg { width: 20rem; }
+
+/*table*/
+.table-gray td { padding: 5px 1rem; border: 1px solid var(--natural_50); }
+.table-gray th { padding: 5px 1rem; border: 1px solid var(--natural_50); background: var(--natural_40); }
+
+/* etc */
+.empty { display: block; }
+.empty.not { display: none; }
+.empty > * { color: var(--natural_50); }
+
+/*scrollbar*/
+body::-webkit-scrollbar {width: 8px;}
+body::-webkit-scrollbar-thumb { background: var(--natural_50); border-radius: 1rem;}
+
+@media (hover:hover) and (pointer:fine) {
+    input.submit:hover { box-shadow: 0px 0px 0 var(--primary_k); transform: translateY(8px); }
+    .btn-p:hover {box-shadow: 0px 0px 0 var(--primary_k); transform: translateY(8px);}
+    .btn-s:hover {box-shadow: 0px 0px 0 var(--second_k); transform: translateY(8px);}
+    .btn.btn-p-l:hover { background-color: var(--primary_m); color: var(--natural_0); }
+    .btn.btn-p-l:hover > a { color: var(--natural_0); }
+    .btn.btn-s-l:hover { background-color: var(--second_m); color: var(--natural_0); }
+    .btn.btn-s-l:hover > a { color: var(--natural_0); }
+    .btn.btn-e-l:hover { background-color: var(--error_m); color: var(--natural_0);}
+    .btn.btn-e-l:hover > a { color: var(--natural_0); }
+    input.submit-f:hover { background-color: var(--second_m); }
+}
+
+/* break point 1600px*/
+@media screen and (max-width:1600px){
+    .inner_01 { padding: 0 32px; }
+}
+/* break point 1280px*/
+@media screen and (max-width:1280px){
+    .inner_01 { padding: 0 16px; }
+    .inner_02 { padding: 0 16px; }
+
+    /* body, html 1rem 정의 */
+    html,body { font-size: 14px; }
+}
+
+/* break point 768px*/
+@media screen and (max-width:768px){
+
+}
+
+/* break point 420px*/
+@media screen and (max-width:420px){
+    /* body, html 1rem 정의 */
+    html,body { font-size: 12px; }
+}
+
+
+/* 채팅 발송 button 스타일 적용 */
+button.submit-f {width:100%; background-color: var(--primary_m); border:none; cursor: pointer; color:var(--natural_0); transition: .2s;}
+button.submit-f.input-sm {
+    width: 160px; height: 56px; border-radius: 30px; font-size:var(--font_lg);
+}
+button.submit-f.input-sm:hover {
+    background-color: #0056b3;
+}

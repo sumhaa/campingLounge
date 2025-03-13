@@ -1,0 +1,92 @@
+#main.chatting { min-height: 100vh; height: 100%;}
+#main.chatting .inner_01 { padding-top: var(--space_lg); padding-bottom: var(--space_xlg); border-radius: var(--round-xlg); height: 100%;}
+#main.chatting .chat_container { display: flex; gap: 1rem; width: 100%; height: 100%; }
+
+#main.chatting [class$="_area"] { position: relative; border: 2px solid var(--primary_m); width: 100%; height: 100%; border-radius: var(--round-xlg); overflow: hidden;}
+
+#main.chatting .chat-list_area {display: flex; flex-direction: column; width: 40%; }
+#main.chatting .title { background-color: var(--primary_d); } 
+
+#main.chatting .chat-list-wrap { height: 100%; flex-grow:1 ; overflow-y: scroll;}
+#main.chatting .chat-list-wrap::-webkit-scrollbar {width: 4px;}
+#main.chatting .chat-list-wrap::-webkit-scrollbar-thumb { background: var(--primary_m); border-radius: 1rem;}
+#main.chatting .chat-list li { cursor: pointer; }
+#main.chatting .chat-list .item {display: flex; align-items: center; gap:1rem;  width: 100%; padding: .5rem 2rem; border-bottom: 1px solid var(--natural_40);}
+#main.chatting .chat-list .txt-area { max-width: 100%; width: calc(100% - 4rem); overflow: hidden; white-space: nowrap; }
+#main.chatting .chat-list .chat-name { font-weight: 600; }
+#main.chatting .chat-list .last-chat { color: var(--natural_50); text-overflow: ellipsis;}
+#main.chatting .chat-list .select .item { background-color: var(--natural_20); }
+
+#main.chatting .profile { width: 3rem; height: 3rem; background-color: var(--primary_m); border-radius: 50%; border:1px solid var(--primary_m)}
+#main.chatting .profile > img { display: none; }
+
+/*찬식 수정*/
+/*#main.chatting .chat-room_area { display: flex; flex-direction: column;  overflow: hidden;}*/
+#main.chatting .chat-room_area {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* 전체 높이 설정 */
+    overflow: hidden; /* 부모에서는 스크롤 방지 */
+}
+/*찬식 수정*/
+/*#main.chatting .chat-room { padding: 0 2rem; overflow-y: scroll; width: 100%; height: 100%;}*/
+#main.chatting .chat-room {
+    flex-grow: 1;  /* 가변 크기로 확장 */
+    padding: 0 2rem;
+    overflow-y: auto; /* 내부에서만 스크롤 생성 */
+    width: 100%;
+}
+
+/*찬식 수정*/
+/*#main.chatting .chat-room::-webkit-scrollbar {width: 4px;}*/
+#main.chatting .chat-room::-webkit-scrollbar {
+    width: 4px;
+}
+
+/*찬식 수정*/
+/*#main.chatting .chat-room::-webkit-scrollbar-thumb { background: var(--primary_m); border-radius: 1rem;}*/
+#main.chatting .chat-room::-webkit-scrollbar-thumb {
+    background: var(--primary_m);
+    border-radius: 1rem;
+}
+
+#main.chatting .chat-room > div:first-child { margin-top: var(--space_lg); }
+
+#main.chatting .chat-room .item {display: flex; align-items: flex-start; gap:1rem;  width: calc(100% - 4rem);}
+#main.chatting .chat-room .item .txt-area { width: fit-content; max-width: calc(100% - 4rem); }
+#main.chatting .chat-room .item .date { font-size: var(--font_sm); color: var(--natural_50); }
+#main.chatting .chat-room .sender,
+#main.chatting .chat-room .recipient { margin-bottom: var(--space_md); }
+
+#main.chatting .chat-room .sender { display: flex; }
+#main.chatting .chat-room .sender .item .txt-area { background-color: var(--primary_d); padding: .5rem 1rem; border-radius: var(--round-lg); border:1px solid var(--primary_m);}
+#main.chatting .chat-room .sender .chat-name { color: var(--primary_k); }
+#main.chatting .chat-room .sender .chat-name a { color: var(--primary_k); }
+
+#main.chatting .chat-room .recipient .item { justify-content: flex-end; }
+#main.chatting .chat-room .recipient { display: flex; justify-content: flex-end; }
+#main.chatting .chat-room .recipient .item .txt-area { background-color: var(--natural_20); padding: .5rem 1rem; border-radius: var(--round-lg); border:1px solid var(--natural_50);}
+
+/*찬식 수정*/
+/*#main.chatting .message-area { width: 100%; background-color: var(--natural_0); border-top:1px solid var(--primary_m);  padding: 1rem 2rem; }*/
+#main.chatting .message-area {
+    width: 100%;
+    background-color: var(--natural_0);
+    border-top: 1px solid var(--primary_m);
+    padding: 1rem 2rem;
+    flex-shrink: 0; /* 입력창이 줄어들지 않도록 고정 */
+}
+#main.chatting .message-area .chatting-form { display: flex; gap: 1rem; }
+
+.profile-thumb {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-thumb > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

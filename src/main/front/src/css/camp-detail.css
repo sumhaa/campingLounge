@@ -1,0 +1,92 @@
+#main.camp-detail .visual_wrap { display: block; position:relative; max-width: 1280px;border-radius: var(--round-xlg); width: 100%; height: calc((100vh - var(--header-height)) - var(--space_lg)); background-size: cover; overflow: hidden; margin: 0 auto; background-repeat: no-repeat}
+#main.camp-detail .visual_wrap.active { animation: visual-open .8s ease-out forwards;}
+
+#main.camp-detail .visual_wrap .inner_02 { position: relative; height: 100%;}
+#main.camp-detail .visual_wrap::after {content:''; display: block; position: absolute; bottom: 0; left: 0; width: 100%; height: 40%; background: rgb(0,0,0); background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%); z-index: 10;}
+#main.camp-detail .visual_wrap .txt-box { display: block; position: absolute; bottom: 0; left: 0; padding: 0 0 var(--space_lg) var(--space_lg); z-index: 20;}
+#main.camp-detail .visual_wrap * { color:var(--natural_0) }
+#main.camp-detail .visual_wrap .title-box { display: flex; gap: 1rem; align-items: center; }
+#main.camp-detail .visual_wrap .icon { width: 2.5rem; height: 2.5rem; border-radius: 50%; border: 2px solid var(--natural_0); display: flex; justify-content: center; align-self: center; cursor: pointer; transition: .2s;}
+#main.camp-detail .visual_wrap .icon img { width: 1.2rem; filter: grayscale(1) invert(1);  }
+#main.camp-detail .visual_wrap .icon.active {background-color: var(--second_m);}
+
+#main.camp-detail .title { font-size: var(--font_xlg); color: var(--primary_m);font-family: 'HakgyoansimDunggeunmisoTTF-B';  }
+#main.camp-detail .icon-info { width: 100%;  border: 1px solid var(--primary_m); padding:var(--space_lg); border-radius: var(--round-lg); margin-top: var(--space_md); }
+#main.camp-detail .icon_list { display: flex; justify-content: space-around;}
+#main.camp-detail .icon_list li { display: flex; flex-direction: column; align-items: center; gap: 8px; width: 15%;}
+#main.camp-detail .icon_list li img { width: 2rem; }
+
+#main.camp-detail .gallery {  display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(2, 1fr); gap: 1rem; }
+#main.camp-detail .gallery li { border-radius: var(--round-md); overflow: hidden; height: 200px;}
+#main.camp-detail .gallery img { display: block; width: 100%; height: 100%; object-fit: cover;}
+
+#main.camp-detail .btn-box ul { display: flex; justify-content: space-around; }
+#main.camp-detail .btn-box .btn.btn-s { margin: 0 auto; float: none; }
+#main.camp-detail .btn-box .btn * { color:var(--natural_0); }
+
+#main.camp-detail .map_wrap { position: relative; border-radius: var(--round-lg); overflow: hidden; }
+
+#main.camp-detail #dark-area { content: ''; display: block; position: fixed ; top:0; left: 0; width: 100%; height: 100%; background-color: var(--natural_100); opacity: 0; z-index: 990; pointer-events: none; transition: .3s;}
+#main.camp-detail #dark-area.active { opacity: 0.5; pointer-events: all; }
+
+#main.camp-detail #modal { display: block; position: fixed; top: 100%; left: 50%; transform: translate(-50%,0);  width: 800px; max-width: 100%; height: 90vh; background-color: var(--natural_0); z-index: 999; border: 2px solid var(--primary_m); border-radius: var(--round-lg); transition: .3s;}
+#main.camp-detail #modal.active { top: 50%; transform: translate(-50%,-50%); }
+
+#main.camp-detail #modal .close-btn { display: block; position: absolute; top: 1rem; right: 1rem ; width: 2rem; height: 2rem; cursor: pointer;}
+#main.camp-detail #modal .close-btn img { width: 100%; }
+
+#main.camp-detail #modal .modal_inner { padding:var(--space_xlg) var(--space_lg) ; }
+main.camp-detail #modal #reservation-form { display: flex; flex-direction: column; align-items: center; gap: var(--space_lg); }
+#main.camp-detail #modal input.submit { background-color: var(--second_m);  box-shadow: 0px 8px 0 var(--second_k); }
+
+/* .calendar */
+#main.camp-detail #modal .calendar { width: 100%; border-radius: 10px;border: 1px solid var(--natural_40); padding: 1rem; text-align: center;}
+#main.camp-detail #modal .calendar .calendar-header { display: flex; justify-content: space-around; align-items: center;}
+#main.camp-detail #modal .calendar .calendar-header p { cursor: pointer; color: var(--primary_m); }
+#main.camp-detail #modal .calendar .cal-month { font-size: var(--font_lg); color: var(--primary_m);}
+#main.camp-detail #modal .calendar .weekdays, 
+#main.camp-detail #modal .calendar .days { display: grid; grid-template-columns: repeat(7, 1fr); gap: 5px; margin-top: 1rem; font-size: var(--font_md);}
+#main.camp-detail #modal .calendar .days { grid-template-rows: repeat(6, 1fr);}
+#main.camp-detail #modal .calendar .weekdays div {  padding: 5px;}
+#main.camp-detail #modal .calendar .day { display: flex; justify-content: center; align-items: center; cursor: pointer; }
+#main.camp-detail #modal .calendar .day p { width: 3rem; height: 3rem ; display: flex; justify-content: center; align-items: center; border-radius: 50%; }
+#main.camp-detail #modal .calendar .day.inactive p { color: var(--natural_40); cursor: default; }
+#main.camp-detail #modal .calendar .day.active p{ background: var(--primary_m); color: var(--natural_0); }
+#main.camp-detail #modal .calendar .day.today p{ border: 1px solid var(--primary_m); }
+
+
+#selectedDate {
+    min-width: 10rem; max-width: 100%; padding: 1rem 2rem; text-align: center; font-size: var(--font_lg); border: 1px solid var(--natural_40); border-radius: var(--round-md); pointer-events: none;
+}
+
+@media (hover:hover) and (pointer:fine){
+    #main.camp-detail .visual_wrap .icon:hover {background-color: var(--primary_m);}
+    #main.camp-detail .btn-box .btn:hover { background-color: var(--second_m); }
+    #main.camp-detail #modal input.submit:hover { box-shadow: 0px 0px 0 var(--second_k); transform: translateY(8px); }
+}
+
+#main.camp-detail .tap-btn { display: none;}
+#main.camp-detail .tap-btn.active { display: block;}
+#main.camp-detail .tap-menu { display: none; }
+#main.camp-detail .tap-menu.active { display: block; }
+
+
+#main.camp-detail .review_list { display: flex; justify-content: space-between; flex-wrap: wrap; }
+#main.camp-detail .review_list .review { width: calc(33% - 1rem); margin-bottom: var(--space_lg); border: 1px solid var(--primary_m); padding: 1rem; border-radius:var(--round-lg); box-shadow: 0 2px 5px rgba(0,0,0,0.3); transition: .3s;}
+#main.camp-detail .review_list .review .img-area { display: block; width: 100% ;  position:relative; border-radius: var(--round-md); overflow: hidden; margin-bottom: var(--space_md);}
+#main.camp-detail .review_list .review .img-area img { display: block; width: 100% ;}
+#main.camp-detail .review_list .review .img-area .btn-box { display: flex; gap: 1rem; position: absolute; bottom: 1rem; right: 1rem; }
+#main.camp-detail .review_list .review .img-area .btn-box >* {display: flex; justify-content: center; align-items: center; width: 2rem; height: 2rem; padding: 5px; border:1px solid var(--natural_100); border-radius: 50%; background-color: rgba(255,255,255,.4); transition: .2s;}
+#main.camp-detail .review_list .review .img-area .btn-box > .active { background-color: var(--second_m); }
+
+#main.camp-detail .review_list .review .txt-area .fs_md { color: var(--natural_60); margin-bottom: var(--space_sm);}
+
+
+@media (hover:hover) and (pointer:fine){
+    #main.camp-detail .review_list .review:hover { border:1px solid var(--second_m); transform: translateY(-1rem); }
+    #main.camp-detail .review_list .review .img-area .btn-box >*:hover { background-color: var(--second_m); }
+}
+
+@keyframes visual-open {
+    to { border-radius: var(--round-xlg); width: 1280px; }
+}

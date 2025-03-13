@@ -1,0 +1,87 @@
+#main.main { padding: 0 }
+#screen { width: 100%; display: flex; }
+#screen > [class*="container"] { transition: .3s; position: relative;}
+#screen .container_m { width: 100%; }
+#screen .container_s { width: 0%;}
+
+#main.main .visual * { transition: .2s }
+#main.main .visual { position: relative; width: 100%; height: 100vh;}
+#main.main .visual .inner_00 { display: flex; flex-direction: column; gap: 2rem; justify-content: space-between; height: 100%; }
+#main.main .visual .visual_wrap {  width: 100%; height: 100%; background-color: var(--primary_m); padding: var(--space_lg) var(--space_lg) var(--space_xlg) var(--space_lg); }
+#main.main .visual .txt-area { display: flex; justify-content: space-between; align-items: center;}
+#main.main .visual .visual_title { font-size: 9.16vw; font-family: 'HakgyoansimDunggeunmisoTTF-B'; color: var(--natural_0); line-height: 1; transition: .2s;}
+#main.main .visual .txt-box { display: flex; justify-content: space-between; width: 100% }
+/*#main.main .visual .txt-box > * { width: 33.3%; }*/
+#main.main .visual .visual_txt { font-size: var(--font_xlg); color: var(--natural_0); line-height: 1; transition: .2s; }
+#main.main .visual .visual_txt-c { font-size: 48px; font-family: 'HakgyoansimDunggeunmisoTTF-B'; color: var(--natural_0); line-height: 1.2; transition: .2s; }
+#main.main .visual .vid_wrap { position: relative; width: 100%; height: 100%; border-radius: 2.5rem; background-color: var(--natural_50); overflow: hidden; transition: .2s}
+#main.main .visual .vid_wrap img { width: 100%; height: 100%; object-fit: cover; }
+/* #main.main .visual .vid_wrap { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); }  */
+#main.main .visual .vid_wrap video {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 100%; }
+#main.main .visual .vid_wrap .icon-scroll { display: flex; flex-direction: column; align-items: center; position: absolute; bottom: 2rem; left: 50%; transform: translate(-50%,0); width: 2.5rem; filter: invert(1); opacity: .8; animation: icon-scroll ease-in-out 1s alternate-reverse infinite; }
+
+
+#main.main .swiper-container a { display: block; width: 100%; height: 100% }
+#main.main .main-swiper01-container .item,
+#main.main .main-swiper02-container .item,
+#main.main .main-swiper03-container .item {position: relative; background-color: var(--natural_50); width: 100%; height: 560px; border-radius: var(--round-lg); overflow: hidden}
+#main.main .swiper-container .img-area { width: 100%; height: 100% }
+#main.main .swiper-container .img-area img { width: 100%; height: 100%; object-fit: cover;}
+#main.main .swiper-container .txt-area { position: absolute; bottom: 0; left: 0; background: linear-gradient(0deg, rgba(22,196,127,.8) 0%, rgba(22,196,127,0) 100%); width: 100%; padding: var(--space_xlg) var(--space_md) var(--space_lg) var(--space_md)}
+#main.main .swiper-arrow_wrap {display: flex; justify-content: space-between; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: calc(100% + 8rem + 2rem); z-index: 10; transition: .2s}
+#main.main .swiper-arrow { width: 4rem; height: 4rem; border-radius: 50%; background-color: var(--primary_m); display: flex; justify-content: center; align-items: center; cursor: pointer; transition: .2s;}
+#main.main .swiper-arrow img { width: 1.5rem; filter: grayscale(1) invert(1); }
+#main.main .swiper-arrow:first-child img { transform: rotate(180deg); }
+
+#main.main .title_wrap { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: var(--space_lg);}
+#main.main .title_wrap a { font-size: var(--font_lg); color: var(--primary_k); text-decoration: underline;line-height: 1;}
+#main.main .main-subtitle { color:var(--primary_m); font-family: 'HakgyoansimDunggeunmisoTTF-B'; line-height: 1;}
+
+#main.main .banner01 {background-color: var(--primary_m); transition: .2s}
+#main.main .banner02 { background-color: var(--second_m); transition: .2s}
+#main.main .banner01 [class*='inner']{ background-color: var(--primary_m);}
+#main.main .banner02 [class*='inner']{ background-color: var(--second_m);}
+
+#main.main .banner { position: relative; width: 100%; border-radius: 20px; background: linear-gradient(90deg, var(--primary_m) 0%, var(--primary_l) 28.06%, var(--primary_m) 100%); padding: var(--space_md) 0;}
+#main.main .banner .banner_title { font-family: 'HakgyoansimDunggeunmisoTTF-B'; color: var(--natural_0); }
+#main.main .banner .txt-box { width: 100%;  }
+#main.main .banner img {  display: block ; position: absolute; right:0; bottom:0; width: 40rem}
+
+#main.main .banner02 { overflow: hidden }
+#main.main .banner02 p { width: max-content; animation: txt-flow 60s linear infinite; font-weight: 300; }
+
+#screen .container_s .login_wrap { position: fixed; top: 1rem; right: 1rem; z-index: 700; width: calc(30% - 1rem); background-color: rgba(208, 252, 234,.5); border-radius: var(--round-xlg); height:calc(100% - 2rem); transform: translateX(calc(100% + 1rem)); border:1px solid var(--primary_m); transition: .3s; overflow: hidden;}
+#screen .container_s .login_inner { display: flex; flex-direction: column; justify-content: space-between; width: 100%; height: 100%; padding-top:20%}
+#screen .container_s .login-cir { width: 12rem; height: 12rem; border-radius: 50%; background-color: var(--primary_m); margin: 0 auto; overflow: hidden;}
+#screen .container_s .login-cir img { width: 100%; height: 100%; object-fit: cover; }
+#screen .container_s .name-wrap { width: fit-content; padding: 8px 2rem; border-radius: 50px; background-color: var(--natural_0); margin: var(--space_md) auto 0 auto; border: 1px solid var(--primary_m); }
+#screen .container_s .member-info { display: flex; flex-direction: column; align-items: center; gap: 1rem; margin-bottom: var(--space_lg); width: fit-content; margin-left: auto; margin-right: auto;}
+#screen .container_s .member-info li { width: 100%; border-bottom: 1px solid var(--natural_40); padding-bottom: .5rem;}
+#screen .container_s .member-info li p { color: var(--natural_50);}
+#screen .container_s .login-input-wrap { background-color: var(--natural_0); width: 100%; min-height: 60%; padding: 2rem 1rem; border-radius: var(--round-xlg) var(--round-xlg) 0 0; border: 1px solid var(--primary_m); }
+#screen .container_s .login-form { display: flex; flex-direction: column; align-items: center; gap: 1rem;}
+
+/*로그인창 오픈*/
+#screen.active .container_m { width: 70%; padding: 0 1rem;}
+#screen.active .container_s { width: 30%;}
+#screen.active .container_s .login_wrap { transform: translateX(0); }
+
+#screen.active #main.main .visual { padding: 1rem 0; }
+#screen.active #main.main .visual .visual_title {font-size: 7rem;}
+#screen.active #main.main .visual .vid_wrap { border-radius: var(--round-lg); }
+#screen.active #main.main .visual .visual_wrap { border-radius: var(--round-xlg); }
+#screen.active .main .banner01 { background-color: transparent; }
+#screen.active .main .banner02 { margin-bottom: var(--space_md); border-radius: var(--round-lg);}
+#screen.active .main .banner01 [class*='inner'] { border-radius: var(--round-lg); padding: 0 1rem; }
+#screen.active #main.main .swiper-arrow_wrap { width: calc(100% - 4rem); opacity: .8;}
+
+@keyframes txt-flow {
+    to { transform: translateX(-50%); }
+}
+@keyframes icon-scroll {
+    to { transform: translate(-50%,1rem) }
+}
+
+@media (hover:hover) and (pointer:fine) {
+    #main.main .swiper-arrow:hover { background-color: var(--second_m); }
+} 

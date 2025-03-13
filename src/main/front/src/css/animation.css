@@ -1,0 +1,183 @@
+/*
+애니메이션 네이밍 규칙
+초기 설정값 = .ani_애니메이션 네임
+애니메이션 동작 = .초기설정.acitive + .옵션
+ex)
+초기설정 .ani_scale
+동작클래스 .ani_scale.active.delay03 (딜레이 0.3s)
+
+동작 방법
+1. 마크업에 active 클래스 삽입
+2. animation.js 를 활용
+*/
+
+/* ----------------------------------------------------------------------------------------------------------------option------- */
+/*사용자가 원하는 옵션을 추가로 만들어서 사용*/
+
+/*재생시간*/
+[class*='ani_'].dur01 { animation-duration:0.1s; }
+[class*='ani_'].dur02 { animation-duration:0.2s; }
+[class*='ani_'].dur03 { animation-duration:0.3s; }
+[class*='ani_'].dur04 { animation-duration:0.4s; }
+[class*='ani_'].dur05 { animation-duration:0.5s; }
+[class*='ani_'].dur10 { animation-duration:1s; }
+[class*='ani_'].dur15 { animation-duration:1.5s; }
+
+/*딜레이*/
+[class*='ani_'].dly01 { animation-delay:0.1s; }
+[class*='ani_'].dly02 { animation-delay:0.2s; }
+[class*='ani_'].dly03 { animation-delay:0.3s; }
+[class*='ani_'].dly04 { animation-delay:0.4s; }
+[class*='ani_'].dly05 { animation-delay:0.5s; }
+[class*='ani_'].dly06 { animation-delay:0.6s; }
+[class*='ani_'].dly07 { animation-delay:0.7s; }
+[class*='ani_'].dly08 { animation-delay:0.8s; }
+[class*='ani_'].dly09 { animation-delay:0.9s; }
+[class*='ani_'].dly10 { animation-delay:1s; }
+[class*='ani_'].dly11 { animation-delay:1.1s; }
+[class*='ani_'].dly12 { animation-delay:1.2s; }
+[class*='ani_'].dly13 { animation-delay:1.3s; }
+[class*='ani_'].dly14 { animation-delay:1.4s; }
+[class*='ani_'].dly15 { animation-delay:1.5s; }
+
+/*무한반복*/
+[class*='ani_'].infinite { animation-iteration-count: infinite; }
+
+/*종료 후 상태유지*/
+[class*='ani_'].forwards { animation-fill-mode: forwards; }
+
+/*반복 시 역방향 재생*/
+[class*='ani_'].reverse { animation-direction: reverse; }
+
+/*진행방식*/
+[class*='ani_'].linear { animation-timing-function: linear; }
+[class*='ani_'].ease { animation-timing-function: ease; }
+[class*='ani_'].ease-in { animation-timing-function: ease-in; }
+[class*='ani_'].ease-out { animation-timing-function: ease-out; }
+[class*='ani_'].ease-inout { animation-timing-function: ease-in-out; }
+
+
+/*-----------------------------------------------------------------------------------------------------------------애니메이션------*/
+
+/* scale */
+/*초기값 = scale이 큰 이미지
+  애니메이션 = 원래 사이즈로 변화
+  transition 값으로 재생속도 조절(변경가능)*/
+.ani_scale { transform: scale(1.1); transition: 2s;}/*초기값*/
+.ani_scale.active { animation-name: scale; animation-fill-mode: forwards; /*사용자 의도대로 첨삭해서 사용*/  }
+.swiper-slide-active .ani_scale {transform: scale(1);}/*해당 스와이퍼 슬라이드가 활성화 되었을때 활성화*/
+
+
+/* txt-slide-up */
+/*보이지 않는 곳에서 텍스트가 나오는 듯한 애니메이션
+  텍스트를 숨겨둘 parent를 마크업에 넣어야함*/
+.ani_txt-slide-up_wrap { overflow: hidden; }/*부모요소의 클래스*/
+.ani_txt-slide-up { display:block; transform: translateY(100%);}/*초기값*/
+.ani_txt-slide-up.active{ animation-name: txt-slide-up; animation-fill-mode: forwards; }
+
+
+/* txt-fade-up */
+/*투명한 텍스트가 살짝 올라오면서 등장하는 애니메이션*/
+.ani_txt-fade-up { transform: translateY(30px); opacity:0;}/*초기값*/
+.ani_txt-fade-up.active{ animation-name: txt-fade-up; animation-fill-mode: forwards; }
+
+
+/* focus */
+/*흐릿한 요소가 초점을 맞추듯 선명해지는 애니메이션*/
+.ani_focus { filter: blur(10px); transition: 1.5s; }
+.ani_focus.active { animation-name: focus; animation-fill-mode: forwards; }
+.swiper-slide-active .ani_focus { filter: blur(0); }/*해당 스와이퍼 슬라이드가 활성화 되었을때 활성화*/
+
+
+/* fade-in */
+/*투명한 요소가 선명해지는 애니메이션*/
+.ani_fade-in { opacity: 0; transition: 1.5s; }
+.ani_fade-in.active { animation-name: fade-in; animation-fill-mode: forwards; animation-timing-function: ease-out}
+.swiper-slide-active .ani_fade-in { opacity: 1; }/*해당 스와이퍼 슬라이드가 활성화 되었을때 활성화*/
+
+
+/* balloon */
+/*withLH 참고/ 요소가 둥실 둥실 움직이는 애니메이션*/
+.ani_balloon {animation: balloon 5s ease-in-out infinite reverse;}
+
+
+/*ani_event-txt*/ /*with LH 참고*/
+/*글자 하나하나에 클래스를 줘서 글자들이 통통 튀게 만드는 애니메이션*/
+[class*='ani_jump'] {display: inline-block;}
+.ani_jump:nth-of-type(1) {  animation: ani_event-txt 1.3s ease-in-out infinite 0.13s; }
+.ani_jump:nth-of-type(2) { animation: ani_event-txt 1.3s ease-in-out infinite 0.26s; }
+.ani_jump:nth-of-type(3) { animation: ani_event-txt 1.3s ease-in-out infinite 0.39s; }
+.ani_jump:nth-of-type(4) { animation: ani_event-txt 1.3s ease-in-out infinite 0.52s; }
+.ani_jump:nth-of-type(5) { animation: ani_event-txt 1.3s ease-in-out infinite 0.65s; }
+.ani_jump:nth-of-type(6) { animation: ani_event-txt 1.3s ease-in-out infinite 0.78s; }
+.ani_jump:nth-of-type(7) { animation: ani_event-txt 1.3s ease-in-out infinite 0.91s; }
+.ani_jump:nth-of-type(8) { animation: ani_event-txt 1.3s ease-in-out infinite 1.04s; }
+.ani_jump:nth-of-type(9) { animation: ani_event-txt 1.3s ease-in-out infinite 1.17s; }
+.ani_jump:nth-of-type(10) { animation: ani_event-txt 1.3s ease-in-out infinite 1.30s; }
+
+
+/*highlighter*/
+/*글자에 형광펜을 긋는 효과를 주는 애니메이션*/
+.ani_hlt{background-image: linear-gradient(#0810C140,#0810C140); background-size: 0% 100%; background-position: 0% 0%; background-repeat: no-repeat; transition:0.8s;}
+.ani_hlt.active{background-size:100% 100%; }
+
+/*------------------------------------------------------------------------------------------------------- hover */
+
+/*hover_up*/
+/*마우스를 올렸을때 요소가 살짝 위로 움직이는 호버*/
+[class*='hover_up'] {transition: 0.3s;}
+
+@media (hover : hover) and (pointer : fine){
+  .hover_up01:hover { transform: translateY(-0.5rem); }
+  .hover_up02:hover { transform: translateY(-0.7rem); }
+  .hover_up03:hover { transform: translateY(-1rem); }
+}
+
+/*hover_scale*/
+/*마우스를 올렸을때 요소가 살짝 커지는 호버*/
+[class*='hover_scale'] {transition: 0.3s;}
+
+@media (hover : hover) and (pointer : fine){
+  .hover_scale01:hover { transform: scale(1.1); }
+  .hover_scale02:hover { transform: scale(1.2); }
+  .hover_scale03:hover { transform: scale(1.3); }
+}
+
+
+/*******************************************************************************************************************************/
+/* @keyframes */
+@keyframes balloon {
+  0%,
+  100% {
+    transform: translateY(0%) rotate(-5deg);
+  }
+  50% {
+    transform: translateY(10%) rotate(5deg);
+  }
+}
+
+@keyframes scale {
+  to {transform: scale(1); }
+}
+
+@keyframes txt-slide-up {
+  to { transform: translateY(0);  }
+}
+
+@keyframes focus {
+  to { filter: blur(0); }
+}
+
+@keyframes fade-in {
+  to { opacity: 1; }
+}
+@keyframes ani_event-txt {
+  0% {transform: translateY(0px); }
+  10% { transform: translateY(-2px); }
+  20% { transform: translateY(0px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes txt-fade-up {
+  to { transform: translateY(0); opacity:1; }
+}

@@ -1,0 +1,116 @@
+#main.review-list .best-review {
+  overflow: hidden;
+  padding-bottom: var(--space_sm);
+}
+#main.review-list .best-review .item {
+  padding: 1rem;
+  border-radius: var(--round-lg);
+  border: 1px solid var(--second_m);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+#main.review-list .best-review .item .image-area {
+  border-radius: var(--round-lg);
+  overflow: hidden;
+  margin-bottom: var(--space_md);
+}
+#main.review-list .best-review .review-title {
+  font-size: var(--font_xlg);
+  color: var(--second_m);
+  font-weight: 600;
+}
+#main.review-list .best-review .camp-name {
+  font-size: var(--font_lg);
+  color: var(--natural_60);
+}
+#main.review-list .best-review .review-date {
+  font-size: var(--font_md);
+  color: var(--natural_60);
+}
+
+#main.review-list .review_list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#main.review-list .review_list .review {
+  width: calc(33% - 1rem);
+  margin-bottom: var(--space_lg);
+  border: 1px solid var(--primary_m);
+  padding: 1rem;
+  border-radius: var(--round-lg);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+#main.review-list .review_list .review .img-area {
+  display: block;
+  width: 100%;
+  position: relative;
+  border-radius: var(--round-md);
+  overflow: hidden;
+  margin-bottom: var(--space_md);
+}
+#main.review-list .review_list .review .img-area img {
+  display: block;
+  width: 100%;
+}
+#main.review-list .review_list .review .img-area .btn-box {
+  display: flex;
+  gap: 1rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+#main.review-list .review_list .review .img-area .btn-box > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 5px;
+  border: 1px solid var(--natural_100);
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  transition: 0.2s;
+}
+#main.review-list .review_list .review .img-area .btn-box > .active {
+  background-color: var(--second_m);
+}
+
+#main.review-list .review_list .review .txt-area .fs_md {
+  color: var(--natural_60);
+  margin-bottom: var(--space_sm);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  #main.review-list .review_list .review:hover {
+    border: 1px solid var(--second_m);
+    transform: translateY(-1rem);
+  }
+  #main.review-list .review_list .review .img-area .btn-box > *:hover {
+    background-color: var(--second_m);
+  }
+}
+
+#main.review-list .icon {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 1px solid var(--natural_100);
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+#main.review-list .icon img {
+  width: 1.2rem;
+}
+#main.review-list .icon.active {
+  background-color: var(--second_m);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  #main.review-list .icon:hover {
+    background-color: var(--primary_m);
+  }
+}

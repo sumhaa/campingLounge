@@ -1,0 +1,8 @@
+.scroll-to-top { display: flex;justify-content: center; align-items: center; position: fixed; bottom: var(--space_lg); right: var(--space_xlg); width: 4rem; height: 4rem; background-color: var(--natural_0); border-radius: 50%; cursor: pointer; opacity: 0; visibility: hidden; transition: .2s; pointer-events: none; border: 1px solid var(--natural_70);}
+.scroll-to-top.visible { opacity: .6; visibility: visible; z-index: 900; pointer-events: auto;}
+.scroll-to-top img { width: 1.5rem; transform: rotate(-90deg)}
+@media  (hover:hover) and (pointer:fine) {
+    .scroll-to-top:hover { opacity: 1; background: var(--primary_m)}
+    .scroll-to-top:hover img { filter: invert(1);}
+}
+

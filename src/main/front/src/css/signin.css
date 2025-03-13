@@ -1,0 +1,12 @@
+#main.signin .signin-input-wrap { border: 1px solid var(--primary_m); padding: var(--space_xlg) var(--space_lg); border-radius: var(--round-xlg);} 
+#main.signin .signin-form { display: flex; flex-direction: column; gap: var(--space_lg); align-items: center; width: 640px; max-width: 100%; margin: 0 auto;}
+#main.signin .item { width: 100%; }
+#main.signin .item-select { display: flex; max-width: 100%; width: 640px; gap: 2rem; align-items: center;}
+#main.signin .info { margin-top: var(--space_xlg); border: 1px solid var(--natural_60); padding:var(--space_lg); border-radius: var(--round-md); width: 100%; height: 300px; overflow-y: scroll;}
+#main.signin .info::-webkit-scrollbar {width: 8px;}
+#main.signin .info::-webkit-scrollbar-thumb { background: var(--natural_50); border-radius: 1rem;}
+#main.signin .add-box { display: flex; gap: var(--space_md); margin-bottom: var(--space_sm); }
+#main.signin .info .fs_md,
+#main.signin .info a,
+#main.signin .info .td { color: var(--natural_50); }
+#main.signin .email-container { display: flex; gap: 1rem; }

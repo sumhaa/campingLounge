@@ -1,0 +1,25 @@
+#main.camp-list .filter { display: flex; flex-wrap: wrap; gap: .5rem; }
+#main.camp-list .filter .item { padding: 5px 1rem; font-size: var(--font_md); border:1px solid var(--primary_m); border-radius: 30px; color: var(--primary_m); cursor: pointer; transition: .2s;}
+#main.camp-list .filter .item.active { background-color: var(--primary_m); color:var(--natural_0); }
+#main.camp-list .search-area { display:flex; width: 100%; border:2px solid var(--primary_m); padding: 1rem 2rem; border-radius: 50px; display: flex; transition: .2s;}
+#main.camp-list .search-area .search-input { width: 100%; font-size: var(--font_xlg); border:none}
+#main.camp-list .search-area .search-btn { display:block; width: 3rem; background: url("../../public/images/common/icon_search.svg") no-repeat; background-size: cover; border: none; cursor: pointer;}
+
+#main.camp-list .camp_list { display: flex; justify-content: space-between; flex-wrap: wrap; }
+#main.camp-list .camp_list .camp { width: calc(33% - 1rem); margin-bottom: var(--space_lg);  border: 1px solid var(--primary_m); border-radius: var(--round-lg); box-shadow: 0 2px 5px rgba(0,0,0,0.3); transition: .3s; overflow: hidden}
+#main.camp-list .camp_list .camp .title-area { background: var(--primary_m); padding: .5rem 1rem; transition: .2s; }
+#main.camp-list .camp_list .camp .title-area * {color: var(--natural_0); display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;}
+#main.camp-list .camp_list .camp .img-area { display: block; width: 100% ; height: 340px; position:relative;  overflow: hidden; padding: 1rem;}
+#main.camp-list .camp_list .camp .img-area > img { display: block; width: 100% ; height:100%; object-fit: cover; border-radius: var(--round-md);}
+#main.camp-list .camp_list .camp .img-area .btn-box { display: flex; gap: .5rem; position: absolute; bottom: 2rem; right: 2rem; }
+#main.camp-list .camp_list .camp .img-area .btn-box >* {display: flex; justify-content: center; align-items: center; width: 2rem; height: 2rem; padding: 5px; border:1px solid var(--natural_100); border-radius: 50%; background-color: rgba(255,255,255,.4); transition: .2s;}
+#main.camp-list .camp_list .camp .img-area .btn-box > .active { background-color: var(--second_m); }
+#main.camp-list .camp_list .camp .txt-area { padding:0 1rem 2rem 1rem; }
+#main.camp-list .camp_list .camp .txt-area .fs_md {display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; color: var(--natural_60); overflow: hidden; text-overflow: ellipsis;}
+
+@media (hover:hover) and (pointer:fine){
+    #main.camp-list .filter .item:hover {background-color: var(--primary_m); color:var(--natural_0);}
+    #main.camp-list .camp_list .camp:hover { border:1px solid var(--second_m); transform: translateY(-1rem); }
+    #main.camp-list .camp_list .camp:hover .title-area { background: var(--second_m); }
+    #main.camp-list .camp_list .camp .img-area .btn-box >*:hover { background-color: var(--second_m); }
+}

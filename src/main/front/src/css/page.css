@@ -1,0 +1,12 @@
+.pagination {display: flex;justify-content: center;gap: .5rem;margin-top: var(--space_lg);}
+ul.pagination li { width: 3rem; height: 3rem; border: 1px solid var(--natural_40); display: flex; justify-content: center; align-items: center; font-size: 1rem; border-radius: 50%;}
+ul.pagination li a { text-decoration: none; color: var(--natural_50); font-size: var(--font_md);}
+ul.pagination li.active a { color: var(--natural_0); }
+ul.pagination li.active { border: 1px solid var(--primary_m); background-color: var(--primary_m); }
+
+.admin .pagination {display: flex;justify-content: center;margin-top: 0; gap: 0;}
+.admin ul.pagination li { width: 3rem; height: 3rem; border: 1px solid var(--natural_40); display: flex; justify-content: center; align-items: center; font-size: 1rem; border-radius: 0;}
+.admin ul.pagination li a { text-decoration: none; color: var(--natural_50); font-size: var(--font_md);}
+.admin ul.pagination li.active a { color: var(--natural_0); }
+.admin ul.pagination li.active { border: 1px solid var(--primary_m); background-color: var(--primary_m); }
+
